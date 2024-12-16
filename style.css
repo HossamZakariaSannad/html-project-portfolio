@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+    
+    
+   
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    height: 1080px;
+    background-image: url("res/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 5%;
+    background-attachment: fixed;
+}
+.Container {
+    position: relative;
+    height: 100%;
+    background-color: rgba(255, 255,255, .1);
+    border: 2px solid rgba(255, 255,255, .2);
+    backdrop-filter: blur(30px);
+    border-radius: 30px;
+}
+header {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+   
+
+}
+.logo {
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+}
+nav a{
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    color: beige;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition:.5s;
+    
+}
+nav a:hover
+{
+    border-color: #fff;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+    padding: 50px 5% 0 ;
+    color: #fff;
+    
+}
+.home-detail h1{
+    font-size: 55px;
+    line-height: 1;
+}
+.home-detail h2{
+    font-size: 32px;
+}
+.home-detail p {
+    margin : 10px 0 20px 0;
+}
+.home-detail .download-social {
+    display: flex;
+    align-items: center;
+}
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px white;
+    color:black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .5s;
+}
+.button:hover{
+    background: transparent;
+    box-shadow: none;
+    color:fuchsia;
+}
+
+.home-detail .social-icons {
+    margin-left: 20px;
+
+}
+.home-detail .social-icons a{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: 1s;
+}
+.home-detail .social-icons a:hover{
+    background-color: #fff;
+    box-shadow: 0 0 10px #fff;
+    color:black;
+}
+
+
+
+.home-img .img-box{
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fff;
+    overflow: hidden;
+}
+.home-img .img-box img{
+    top: 30px;
+    margin: -86px;
+    position: absolute;
+    display: block;
+    width: 137%;
+    object-fit: cover;
+}
+
+/*    */
+
+
+
+ 
+  .breakline {
+    
+      border: none;
+      height: 2px;
+      background: #ddd;
+      margin: 40px 0;
+  }
+ 
+  .about-me {
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+   
+      
+  }
+  
+  .about-me h2 {
+      font-size: 2rem;
+      margin-bottom: 300px;
+      color: #fff;
+      
+  }
+  
+  .about-me p {
+     font-weight: bold;
+      font-size: 1rem;
+      line-height: 2;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-bottom: 90px;
+      font-family:monospace; 
+
+      
+  }
+  
+
+  .info-cards {
+
+      display: flex;
+      justify-content: center;
+      gap: 200px;
+      padding: 20px;
+      margin-top: 20px;
+  }
+  
+  .card {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+      color: #fff;
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(30px);
+  }
+  
+  .card:hover {
+      transform: translateY(-15px);
+  }
+  
+  .card-icon {
+      font-size: 2.5rem;
+      color: red;
+      margin-bottom: 10px;
+  }
+  
+  .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+  }
+  
+  .card p {
+      font-size: 1rem;
+      color: #ddd;
+  }
