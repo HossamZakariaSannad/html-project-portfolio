@@ -145,17 +145,18 @@
         <section class="contact-us">
             <h2>Contact Us</h2>
             <form class="contact-form" action="https://formsubmit.co/hossamzakaria1212@gmail.com" method="POST">
-                <!-- Fix the redirect after submission -->
-                <input type="hidden" name="_next" value="https://hossamzakariasannad.github.io/html-project-portfolio/">
-            
-                <!-- Optional: Use table email format (cleaner email) -->
-                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://hossamzakariasannad.github.io/html-project-portfolio/thankyou.html">
             
                 <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
+            
+                <input type="email" name="email" placeholder="Your Email" required
+                pattern=".+@.+\..+"
+                title="Please enter a valid email address">
+         
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit" class="button">Send Message</button>
             </form>
+            
             
             
         </section>
