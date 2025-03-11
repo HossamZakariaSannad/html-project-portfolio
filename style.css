@@ -11,28 +11,70 @@
     }
 
     body {
-        /* Modern Animated Gradient - Option 1 (Current) */
-        background: linear-gradient(-45deg, #0a192f, #112240, #1a365d, #233876);
+        /* Modern Animated Gradient - Option 1 (Current - Professional Blue) */
+        /* background: linear-gradient(-45deg, #0a192f, #112240, #1a365d, #233876);
         background-size: 400% 400%;
-        animation: gradientBG 15s ease infinite;
+        animation: gradientBG 15s ease infinite; */
 
-        /* Modern Animated Gradient - Option 2 (Uncomment to use) */
+        /* Modern Animated Gradient - Option 2 (Deep Purple Theme) */
         /*
-        background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #541690);
-        background-size: 400% 400%;
-        animation: gradientBG 15s ease infinite;
-        */
-
-        /* Modern Animated Gradient - Option 3 (Uncomment to use) */
-        /*
-        background: linear-gradient(-45deg, #2C3333, #2E4F4F, #0E8388, #2C3333);
+        background: linear-gradient(-45deg, #2C0735, #481E5A, #6E3C7E, #8B4C9F);
         background-size: 400% 400%;
         animation: gradientBG 15s ease infinite;
         */
 
-        /* Modern Animated Gradient - Option 4 (Uncomment to use) */
+        /* Modern Animated Gradient - Option 3 (Ocean Breeze) */
         /*
-        background: linear-gradient(-45deg, #0F0F0F, #232D3F, #005B41, #008170);
+        background: linear-gradient(-45deg, #184E77, #1E6091, #1A759F, #168AAD);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        */
+
+        /* Modern Animated Gradient - Option 4 (Forest Night) */
+        /*
+        background: linear-gradient(-45deg, #1B4332, #2D6A4F, #40916C, #52B788);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        */
+
+        /* Modern Animated Gradient - Option 5 (Sunset Vibes) */
+        /*
+        background: linear-gradient(-45deg, #3D348B, #7678ED, #F7B801, #F18701);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        */
+
+        /* Modern Animated Gradient - Option 6 (Dark Elegance) */
+        /*
+        background: linear-gradient(-45deg, #2B2D42, #3E4266, #565B8C, #6E72B3);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        */
+
+        /* Modern Animated Gradient - Option 7 (Tech Noir) */
+        /*
+        background: linear-gradient(-45deg, #2E0249, #570A57, #A91079, #F806CC);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        */
+
+        /* Modern Animated Gradient - Option 8 (Northern Lights) */
+        
+        background: linear-gradient(-45deg, #003844, #006C67, #00A896, #00C6B5);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+       
+
+        /* Modern Animated Gradient - Option 9 (Midnight City) */
+        /*
+        background: linear-gradient(-45deg, #0F1C2E, #223554, #355C7D, #4B84A7);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        */
+
+        /* Modern Animated Gradient - Option 10 (Royal Purple) */
+        /*
+        background: linear-gradient(-45deg, #240046, #3C096C, #5A189A, #7B2CBF);
         background-size: 400% 400%;
         animation: gradientBG 15s ease infinite;
         */
@@ -69,6 +111,7 @@
         position: relative;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 0;
     }
 
     .Container:hover {
@@ -76,7 +119,11 @@
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     }
 
-    /* Header Styling */
+    .Container.show {
+        animation: scaleIn 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
+    }
+
+    /* Header and Navigation Styling */
     header {
         position: fixed;
         top: 0;
@@ -87,9 +134,9 @@
         justify-content: space-between;
         align-items: center;
         z-index: 1000;
-        background: rgba(15, 15, 15, 0.9);
+        background: rgba(15, 15, 15, 0.95);
         backdrop-filter: blur(10px);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .logo {
@@ -104,6 +151,11 @@
         color: #00ffcc;
     }
 
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
     nav a {
         color: white;
         text-decoration: none;
@@ -112,13 +164,142 @@
         padding: 8px 16px;
         border-radius: 20px;
         transition: all 0.3s ease;
+        position: relative;
     }
 
     nav a:hover,
     nav a:focus {
-        background: rgba(255, 255, 255, 0.1);
         color: #00ffcc;
-        border-color: #00ffcc;
+    }
+
+    nav a.active {
+        background: rgba(0, 255, 204, 0.1);
+        color: #00ffcc;
+    }
+
+    nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #00ffcc;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+        width: 70%;
+    }
+
+    /* Mobile Navigation */
+    @media screen and (max-width: 768px) {
+        header {
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+        }
+
+        nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.95);
+            padding: 12px 10px;
+            display: flex;
+            justify-content: space-around;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            margin: 0;
+            padding: 8px 12px;
+            font-size: 14px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        nav a::after {
+            bottom: 0;
+        }
+
+        /* Adjust content padding for bottom navigation */
+        body {
+            padding-bottom: 60px;
+        }
+
+        .Container:last-of-type {
+            margin-bottom: 80px;
+        }
+    }
+
+    /* Tablet Navigation */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        header {
+            padding: 15px 30px;
+        }
+
+        nav a {
+            margin-left: 15px;
+            padding: 8px 12px;
+        }
+    }
+
+    /* Navigation for larger screens */
+    @media screen and (min-width: 1025px) {
+        header {
+            padding: 20px 5%;
+        }
+
+        nav {
+            gap: 10px;
+        }
+
+        nav a {
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 255, 204, 0.1);
+            border-radius: 20px;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+            z-index: -1;
+        }
+
+        nav a:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+
+    /* Safe area insets for notched devices */
+    @supports (padding: max(0px)) {
+        header {
+            padding-top: max(20px, env(safe-area-inset-top));
+            padding-left: max(5%, env(safe-area-inset-left));
+            padding-right: max(5%, env(safe-area-inset-right));
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                padding-bottom: max(12px, env(safe-area-inset-bottom));
+            }
+        }
     }
 
     /* Home Section */
@@ -270,6 +451,14 @@
         width: 80%;
         height: 1px;
         background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.5), transparent);
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .breakline.show {
+        opacity: 1;
+        transform: scaleX(1);
+        transition: transform 1s ease, opacity 1s ease;
     }
 
     /* About Section */
@@ -277,11 +466,13 @@
         text-align: center;
         padding: 20px;
         color: white;
+        opacity: 0;
     }
 
     .about-me h2 {
         font-size: 2rem;
         margin-bottom: 15px;
+        opacity: 0;
     }
 
     .about-me p {
@@ -289,6 +480,10 @@
         max-width: 600px;
         margin: 0 auto;
         line-height: 1.6;
+    }
+
+    .about-me.show {
+        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
     }
 
     /* Contact Cards */
@@ -310,6 +505,7 @@
         max-width: 280px;
         backdrop-filter: blur(15px);
         transition: 0.3s ease;
+        opacity: 0;
     }
 
     .card:hover {
@@ -328,37 +524,11 @@
         margin-bottom: 8px;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-        header {
-            padding: 15px;
-        }
-
-        nav a {
-            margin-left: 10px;
-            padding: 6px 12px;
-        }
-
-        .home-detail h1 {
-            font-size: 2.5rem;
-        }
-
-        .home-detail h2 {
-            font-size: 1.4rem;
-        }
-
-        .home-img .img-box {
-            width: 280px;
-            height: 280px;
-        }
-
-        .services h2,
-        .portfolio h2,
-        .contact-us h2 {
-            font-size: 2.2rem;
-        }
+    .info-cards .card.show {
+        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
     }
 
+    /* Home Detail and Image Animations */
     .home-detail, .home-img {
         opacity: 0;
         animation: fadeInUp 0.8s ease forwards;
@@ -367,7 +537,7 @@
     @keyframes fadeInUp {
         from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(50px);
         }
         to {
             opacity: 1;
@@ -381,8 +551,10 @@
 
     .service-card, .project-card {
         opacity: 0;
-        transform: translateY(30px);
-        animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .service-card.show, .project-card.show {
+        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
     }
 
     .service-card:nth-child(2) {
@@ -422,6 +594,7 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        opacity: 0;
     }
     
     .contact-form {
@@ -430,6 +603,7 @@
         gap: 20px;
         max-width: 600px;
         margin: 0 auto;
+        opacity: 0;
     }
     
     .contact-form input,
@@ -461,6 +635,10 @@
         width: 200px;
     }
     
+    .contact-form.show {
+        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
+    }
+    
     .services, .portfolio {
         text-align: center;
         color: white;
@@ -474,6 +652,7 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        opacity: 0;
     }
     
     .service-list {
@@ -634,4 +813,65 @@
             padding: 12px 20px;
         }
     }
+
+    /* Animation Keyframes */
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes scaleIn {
+        from {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Section headings animations */
+    .services h2.show, .portfolio h2.show, .about-me h2.show, .contact-us h2.show {
+        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
+    }
+
+    /* Delay classes for staggered animations */
+    .delay-1 {
+        animation-delay: 0.2s !important;
+    }
+
+    .delay-2 {
+        animation-delay: 0.4s !important;
+    }
+
+    .delay-3 {
+        animation-delay: 0.6s !important;
+    }
+
+    /* Preserve animations on mobile */
+    @media (prefers-reduced-motion: no-preference) {
+        .animated {
+            will-change: transform, opacity;
+        }
+    }
+
+    /* Mobile First Approach */
     
