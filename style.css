@@ -52,22 +52,19 @@
         */
 
         /* Modern Animated Gradient - Option 7 (Tech Noir) */
-        /*
-        background: linear-gradient(-45deg, #2E0249, #570A57, #A91079, #F806CC);
+        
+        /* background: linear-gradient(-45deg, #2E0249, #570A57, #A91079, #F806CC);
         background-size: 400% 400%;
         animation: gradientBG 15s ease infinite;
         */
 
-        /* Modern Animated Gradient - Option 8 (Northern Lights) */
-        
-        background: linear-gradient(-45deg, #003844, #006C67, #00A896, #00C6B5);
+        /* Modern Animated Gradient - Option 8 (Dark Northern Lights) */
+        background: linear-gradient(-45deg, #001f26, #003d3a, #005853, #00756c);
         background-size: 400% 400%;
         animation: gradientBG 15s ease infinite;
-       
-
         /* Modern Animated Gradient - Option 9 (Midnight City) */
-        /*
-        background: linear-gradient(-45deg, #0F1C2E, #223554, #355C7D, #4B84A7);
+        
+        /* background: linear-gradient(-45deg, #0F1C2E, #223554, #355C7D, #4B84A7);
         background-size: 400% 400%;
         animation: gradientBG 15s ease infinite;
         */
