@@ -104,11 +104,15 @@
         backdrop-filter: blur(20px);
         border-radius: 24px;
         padding: 40px;
-        overflow: hidden;
+        overflow: visible;
         position: relative;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        opacity: 0;
+        opacity: 1;
+    }
+
+    .Container:first-of-type {
+        margin-top: 0;
     }
 
     .Container:hover {
@@ -117,7 +121,9 @@
     }
 
     .Container.show {
-        animation: scaleIn 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 
     /* Header and Navigation Styling */
@@ -305,7 +311,8 @@
         flex-direction: column-reverse;
         align-items: center;
         text-align: center;
-        padding: 120px 20px 40px;
+        min-height: 100vh;
+        padding: 80px 20px 40px;
         gap: 40px;
         color: white;
     }
@@ -316,16 +323,31 @@
             text-align: left;
             justify-content: space-between;
             align-items: center;
-            padding-top: 150px;
+            padding: 100px 20px 40px;
+            min-height: 100vh;
         }
     
         .home-detail {
             text-align: left;
             flex: 1;
+            padding-right: 40px;
         }
     
         .home-img {
             flex-shrink: 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .home {
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+
+        .home-img .img-box {
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
         }
     }
     
@@ -448,14 +470,14 @@
         width: 80%;
         height: 1px;
         background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.5), transparent);
-        opacity: 0;
-        transform: scaleX(0);
+        opacity: 1;
+        transform: scaleX(1);
     }
 
     .breakline.show {
+        animation: none;
         opacity: 1;
-        transform: scaleX(1);
-        transition: transform 1s ease, opacity 1s ease;
+        transform: none;
     }
 
     /* About Section */
@@ -463,13 +485,13 @@
         text-align: center;
         padding: 20px;
         color: white;
-        opacity: 0;
+        opacity: 1;
     }
 
     .about-me h2 {
         font-size: 2rem;
         margin-bottom: 15px;
-        opacity: 0;
+        opacity: 1;
     }
 
     .about-me p {
@@ -480,7 +502,9 @@
     }
 
     .about-me.show {
-        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 
     /* Contact Cards */
@@ -502,7 +526,7 @@
         max-width: 280px;
         backdrop-filter: blur(15px);
         transition: 0.3s ease;
-        opacity: 0;
+        opacity: 1;
     }
 
     .card:hover {
@@ -522,22 +546,23 @@
     }
 
     .info-cards .card.show {
-        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 
     /* Home Detail and Image Animations */
     .home-detail, .home-img {
-        opacity: 0;
-        animation: fadeInUp 0.8s ease forwards;
+        opacity: 1;
+        animation: none;
+        transform: none;
     }
 
     @keyframes fadeInUp {
         from {
-            opacity: 0;
             transform: translateY(50px);
         }
         to {
-            opacity: 1;
             transform: translateY(0);
         }
     }
@@ -547,11 +572,13 @@
     }
 
     .service-card, .project-card {
-        opacity: 0;
+        opacity: 1;
     }
 
     .service-card.show, .project-card.show {
-        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 
     .service-card:nth-child(2) {
@@ -591,7 +618,7 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        opacity: 0;
+        opacity: 1;
     }
     
     .contact-form {
@@ -600,7 +627,7 @@
         gap: 20px;
         max-width: 600px;
         margin: 0 auto;
-        opacity: 0;
+        opacity: 1;
     }
     
     .contact-form input,
@@ -633,7 +660,9 @@
     }
     
     .contact-form.show {
-        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
     
     .services, .portfolio {
@@ -649,7 +678,7 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        opacity: 0;
+        opacity: 1;
     }
     
     .service-list {
@@ -814,40 +843,36 @@
     /* Animation Keyframes */
     @keyframes fadeInLeft {
         from {
-            opacity: 0;
             transform: translateX(-50px);
         }
         to {
-            opacity: 1;
             transform: translateX(0);
         }
     }
 
     @keyframes fadeInRight {
         from {
-            opacity: 0;
             transform: translateX(50px);
         }
         to {
-            opacity: 1;
             transform: translateX(0);
         }
     }
 
     @keyframes scaleIn {
         from {
-            opacity: 0;
             transform: scale(0.95);
         }
         to {
-            opacity: 1;
             transform: scale(1);
         }
     }
 
     /* Section headings animations */
     .services h2.show, .portfolio h2.show, .about-me h2.show, .contact-us h2.show {
-        animation: fadeInUp 0.8s cubic-bezier(0.13, 0.71, 0.52, 0.97) forwards;
+        animation: none;
+        opacity: 1;
+        transform: none;
     }
 
     /* Delay classes for staggered animations */
