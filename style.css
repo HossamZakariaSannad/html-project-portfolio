@@ -896,4 +896,45 @@
     }
 
     /* Mobile First Approach */
+
+    /* Base states for animated elements */
+    .Container, .service-card, .project-card, .about-me, .contact-form, .card, .services h2, .portfolio h2, .about-me h2, .contact-us h2 {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        will-change: opacity, transform;
+    }
+
+    /* Show state - applied when element comes into view */
+    .show {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    /* Stagger delays for cards */
+    .service-card:nth-child(1) { transition-delay: 0.1s; }
+    .service-card:nth-child(2) { transition-delay: 0.2s; }
+    .service-card:nth-child(3) { transition-delay: 0.3s; }
+    .service-card:nth-child(4) { transition-delay: 0.4s; }
+
+    .project-card:nth-child(1) { transition-delay: 0.1s; }
+    .project-card:nth-child(2) { transition-delay: 0.2s; }
+    .project-card:nth-child(3) { transition-delay: 0.3s; }
+    .project-card:nth-child(4) { transition-delay: 0.4s; }
+
+    /* Remove all other animation-related properties */
+    .Container, .service-card, .project-card, .about-me, .contact-form, .card {
+        animation: none;
+    }
+
+    .services h2.show, .portfolio h2.show, .about-me h2.show, .contact-us h2.show {
+        animation: none;
+    }
+
+    /* Ensure elements stay visible after animation */
+    .Container.show, .service-card.show, .project-card.show, .about-me.show, .contact-form.show, .card.show {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
     

@@ -1,66 +1,44 @@
-// Intersection Observer configuration
-const observerOptions = {
+// Create a single observer instance
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // Only add show class when element comes into view
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            // Once element is shown, stop observing it
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
     root: null,
     rootMargin: '0px',
     threshold: 0.15
-};
+});
 
-// Callback function when elements intersect
-const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            
-            // Add delays to child elements if needed
-            if (entry.target.classList.contains('service-list') || 
-                entry.target.classList.contains('projects-grid') ||
-                entry.target.classList.contains('info-cards')) {
-                const children = entry.target.children;
-                Array.from(children).forEach((child, index) => {
-                    child.style.animationDelay = `${index * 0.2}s`;
-                });
-            }
-        }
-    });
-};
-
-// Create the observer
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-// Function to start observing elements
+// Function to initialize animations
 function initAnimations() {
-    // Elements to observe
+    // Select all elements to animate
     const elements = document.querySelectorAll(`
         .Container,
         .service-card,
         .project-card,
         .about-me,
-        .info-cards .card,
         .contact-form,
+        .card,
         .services h2,
         .portfolio h2,
         .about-me h2,
-        .contact-us h2,
-        .breakline,
-        .service-list,
-        .projects-grid,
-        .info-cards
+        .contact-us h2
     `);
 
-    // Start observing each element
-    elements.forEach(element => {
-        // Reset classes before observing
-        element.classList.remove('show');
-        observer.observe(element);
-    });
+    // Observe each element
+    elements.forEach(element => observer.observe(element));
 }
 
-// Navigation handling
+// Function to handle navigation
 function handleNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a');
 
-    // Add click event listeners to nav links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             navLinks.forEach(l => l.classList.remove('active'));
@@ -68,12 +46,10 @@ function handleNavigation() {
         });
     });
 
-    // Update active link on scroll
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             if (scrollY >= (sectionTop - 200)) {
                 current = section.getAttribute('id');
             }
@@ -88,14 +64,12 @@ function handleNavigation() {
     });
 }
 
-// Initialize animations when DOM is loaded
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Small delay to ensure proper initialization
     setTimeout(() => {
         initAnimations();
         handleNavigation();
-        handleMobileHeight();
-        setupMobileNav();
-        setupTouchInteractions();
     }, 100);
 });
 
