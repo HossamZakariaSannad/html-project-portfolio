@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <title>Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="res/favicon.svg">
+    <link rel="manifest" href="res/site.webmanifest">
+    <meta name="theme-color" content="#001f26">
+    <title>Hossam Zakaria | Portfolio</title>
 </head>
 <body>
     <div class="Container">
         <header>
             <a href="#" class="logo">Portfolio</a>
             <nav>
-                <a href="#" style="border-bottom:2px white solid;">Home</a>
+                <a href="#" class="active">Home</a>
                 <a href="#about-me">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#services">Service</a>
@@ -73,30 +77,41 @@
     <div class="Container">
         <section class="portfolio" id="projects">
             <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="res/openpose.jpg" alt="Project Image">
-                    <h3>MUSCLE-RECYCLER </h3>
-                    <p>Ai project based on python, Exercise Recognition, Pose Estimation (Open Pose Model), Angles Measurements, Data Preprocessing, Counting Repetition, Feedback, and Guidance Avatar.  </p>
-                    <a href="https://github.com/HossamZakariaSannad/MUSCLE-RECYCLER" target="_blank" class="button">View on GitHub</a>
+            <div class="projects-slider">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="res/openpose.jpg" alt="Project Image">
+                        <h3>MUSCLE-RECYCLER </h3>
+                        <p>Ai project based on python, Exercise Recognition, Pose Estimation (Open Pose Model), Angles Measurements, Data Preprocessing, Counting Repetition, Feedback, and Guidance Avatar.  </p>
+                        <a href="https://github.com/HossamZakariaSannad/MUSCLE-RECYCLER" target="_blank" class="button">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="res/goodreads.png" alt="Project Image">
+                        <h3>Good Reads</h3>
+                        <p>A MERN-based full-stack book management web application featuring secure authentication, advanced search, and an intuitive UI. Implements Redux for state management and optimizes database queries for performance.</p>
+                        <a href="https://github.com/HossamZakariaSannad/Goodreads-App" target="_blank" class="button">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="res/dbms.png" alt="Project Image">
+                        <h3>Database System</h3>
+                        <p>A database engine built entirely in Bash, providing a command-line interface for structured data storage and retrieval. Designed to simplify database management in UNIX-based systems.</p>
+                        <a href="https://github.com/HossamZakariaSannad/DataBase-MS-BashScript" target="_blank" class="button">View on GitHub</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="res/e-commerce.png" alt="Project Image">
+                        <h3>E-Commerce</h3>
+                        <p>A frontend-focused e-commerce platform built using HTML, CSS, and modern ES6 JavaScript with Bootstrap. Provides product browsing, cart functionality, and a streamlined checkout experience.</p>
+                        <a href="https://github.com/HossamZakariaSannad/E-Commerce-Vanilla-ITI" target="_blank" class="button">View on GitHub</a>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <img src="res/goodreads.png" alt="Project Image">
-                    <h3>Good Reads</h3>
-                    <p>A MERN-based full-stack book management web application featuring secure authentication, advanced search, and an intuitive UI. Implements Redux for state management and optimizes database queries for performance.</p>
-                    <a href="https://github.com/HossamZakariaSannad/Goodreads-App" target="_blank" class="button">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <img src="res/dbms.png" alt="Project Image">
-                    <h3>Database System</h3>
-                    <p>A database engine built entirely in Bash, providing a command-line interface for structured data storage and retrieval. Designed to simplify database management in UNIX-based systems.</p>
-                    <a href="https://github.com/HossamZakariaSannad/DataBase-MS-BashScript" target="_blank" class="button">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <img src="res/e-commerce.png" alt="Project Image">
-                    <h3>E-Commerce</h3>
-                    <p>A frontend-focused e-commerce platform built using HTML, CSS, and modern ES6 JavaScript with Bootstrap. Provides product browsing, cart functionality, and a streamlined checkout experience.</p>
-                    <a href="https://github.com/HossamZakariaSannad/E-Commerce-Vanilla-ITI" target="_blank" class="button">View on GitHub</a>
+                <div class="slider-controls">
+                    <button class="slider-btn prev" aria-label="Previous projects">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </button>
+                    <div class="slider-pagination"></div>
+                    <button class="slider-btn next" aria-label="Next projects">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </button>
                 </div>
             </div>
         </section>
