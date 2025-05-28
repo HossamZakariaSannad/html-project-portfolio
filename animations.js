@@ -87,8 +87,8 @@ function handleProjectSlider() {
     }
 
     function goToPage(page) {
-        currentPage = page;
-        const slideWidth = 100 / projectsPerPage;
+        currentPage = Math.min(Math.max(page, 0), totalPages - 1); // Ensure page is within bounds
+        const slideWidth = 100; // Each page shows projectsPerPage cards, so slide by 100%
         const offset = -currentPage * slideWidth;
         projectsGrid.style.transform = `translateX(${offset}%)`;
         updateButtons();
@@ -113,10 +113,19 @@ function handleProjectSlider() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             const newProjectsPerPage = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
-            if (newProjectsPerPage !== projectsPerPage) {
-                currentPage = 0;
-                goToPage(0);
+            const newTotalPages = Math.ceil(projects.length / newProjectsPerPage);
+            // Recreate pagination dots
+            paginationContainer.innerHTML = '';
+            for (let i = 0; i < newTotalPages; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('pagination-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToPage(i));
+                paginationContainer.appendChild(dot);
             }
+            // Reset to first page on resize to avoid offset issues
+            currentPage = 0;
+            goToPage(0);
         }, 250);
     });
 
