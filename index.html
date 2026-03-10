@@ -3,785 +3,740 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hossam Zakaria | Full-Stack Developer</title>
     <meta
       name="description"
-      content="Hossam Zakaria - Full Stack Developer Portfolio. Expert in MERN stack, Django, Python, React.js, and modern web technologies."
+      content="Full-stack developer portfolio for Hossam Zakaria. MERN, Django, Python, cloud deployment, and responsive product-focused web applications."
     />
     <meta
       name="keywords"
-      content="Full Stack Developer, MERN Stack, Django, React.js, Node.js, Python, Web Developer, Portfolio"
+      content="Hossam Zakaria, full-stack developer, MERN, Django, Python, Node.js, React, portfolio"
     />
     <meta name="author" content="Hossam Zakaria" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Hossam Zakaria | Full Stack Developer" />
+    <meta property="og:title" content="Hossam Zakaria | Full-Stack Developer" />
     <meta
       property="og:description"
-      content="Expert Full Stack Developer specializing in MERN stack and Django. Building scalable, high-performance web applications."
+      content="Developer portfolio featuring scalable web apps, strong frontend execution, and full-stack product delivery."
     />
-    <meta property="og:type" content="website" />
     <meta
       property="og:url"
       content="https://hossamzakariasannad.github.io/html-project-portfolio/"
     />
-
-    <!-- Favicon -->
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="res/nobg.png" />
+    <meta name="theme-color" content="#0b1220" />
     <link rel="icon" type="image/svg+xml" href="res/favicon.svg" />
     <link rel="manifest" href="res/site.webmanifest" />
-    <meta name="theme-color" content="#00ffcc" />
-
-    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
-
-    <title>Hossam Zakaria | Full Stack Developer Portfolio</title>
   </head>
   <body>
-    <!-- Loading Screen -->
-    <div class="loader-overlay">
-      <div class="loader-container">
-        <div class="loader-animation">
-          <div class="loader-dot"></div>
-          <div class="loader-dot"></div>
-          <div class="loader-dot"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="page-shell" aria-hidden="true">
+      <div class="page-orb orb-one"></div>
+      <div class="page-orb orb-two"></div>
+      <div class="page-grid"></div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <nav class="navbar" aria-label="Primary">
+        <div class="container nav-container">
+          <a class="brand" href="#home" aria-label="Hossam Zakaria home">
+            <span class="brand-mark">HZ</span>
+            <span class="brand-text">Hossam Zakaria</span>
+          </a>
+
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Open menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="nav-menu" id="nav-menu">
+            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#journey">Journey</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
+
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle color theme"
+            title="Toggle color theme"
+          >
+            <i class="ri-sun-line theme-icon theme-icon-light"></i>
+            <i class="ri-moon-clear-line theme-icon theme-icon-dark"></i>
+          </button>
         </div>
-        <p class="loader-text">Loading Portfolio...</p>
-      </div>
-    </div>
+      </nav>
+    </header>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
-
-    <!-- Cursor -->
-    <div class="custom-cursor">
-      <div class="cursor-dot"></div>
-      <div class="cursor-outline"></div>
-    </div>
-
-    <!-- Background Particles -->
-    <div class="particles-container">
-      <canvas id="particles-canvas"></canvas>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <a href="#home" class="nav-logo">
-          <span class="logo-text">Hossam</span>
-          <span class="logo-accent">Zakaria</span>
-        </a>
-
-        <div class="nav-menu" id="nav-menu">
-          <a href="#home" class="nav-link active" data-section="home">
-            <i class="ri-home-4-line nav-icon"></i>
-            <span>Home</span>
-          </a>
-          <a href="#about" class="nav-link" data-section="about">
-            <i class="ri-user-3-line nav-icon"></i>
-            <span>About</span>
-          </a>
-          <a href="#services" class="nav-link" data-section="services">
-            <i class="ri-service-line nav-icon"></i>
-            <span>Services</span>
-          </a>
-          <a href="#projects" class="nav-link" data-section="projects">
-            <i class="ri-folder-3-line nav-icon"></i>
-            <span>Projects</span>
-          </a>
-          <a href="#contact" class="nav-link" data-section="contact">
-            <i class="ri-mail-line nav-icon"></i>
-            <span>Contact</span>
-          </a>
-        </div>
-
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section class="hero" id="home">
-        <div class="hero-container">
-          <div class="hero-content animate-on-scroll">
-            <h1 class="hero-title">
-              <span class="title-line">Hossam</span>
-              <span class="title-line title-accent">Zakaria</span>
+    <main id="main-content">
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Full-stack developer based in Cairo</p>
+            <h1>
+              Building polished web products with strong frontend craft and
+              reliable backend execution.
             </h1>
-
-            <div class="hero-subtitle">
-              <span class="typing-text" id="typing-text"></span>
-              <span class="cursor-blink">|</span>
-            </div>
-
-            <p class="hero-description">
-              ITI graduate from an Intensive Code Camp specializing in
-              <strong>MERN stack</strong> and <strong>Django</strong>.
-              Experienced in building scalable web applications using
-              <strong>React.js</strong>, <strong>Node.js</strong>,
-              <strong>Express.js</strong>, <strong>Python</strong>, and modern
-              deployment with <strong>AWS</strong> and <strong>Docker</strong>.
-              Passionate about creating impactful projects with clean, efficient
-              code.
+            <p class="hero-lead">
+              I design and develop scalable, user-focused applications using
+              JavaScript, React, Node.js, Python, and Django. My work balances
+              clean UI, maintainable architecture, and production readiness.
             </p>
 
-            <div class="hero-buttons">
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">
+                <i class="ri-layout-grid-line"></i>
+                <span>View Projects</span>
+              </a>
+              <a class="btn btn-secondary" href="#contact">
+                <i class="ri-mail-send-line"></i>
+                <span>Contact Me</span>
+              </a>
               <a
+                class="btn btn-ghost"
                 href="https://drive.google.com/file/d/1LW6YRiupjAACYniKepDN4J32lD5FQOJe/view?usp=sharing"
                 target="_blank"
-                class="btn btn-primary"
+                rel="noreferrer"
               >
                 <i class="ri-download-line"></i>
                 <span>Download CV</span>
               </a>
-              <a href="#projects" class="btn btn-secondary">
-                <i class="ri-eye-line"></i>
-                <span>View Projects</span>
-              </a>
             </div>
 
-            <div class="social-links">
+            <ul class="hero-highlights" aria-label="Key strengths">
+              <li>Responsive interfaces with strong UX hierarchy</li>
+              <li>APIs, databases, authentication, and deployment</li>
+              <li>Product-focused delivery for modern web applications</li>
+            </ul>
+
+            <div class="social-links" aria-label="Social links">
               <a
                 href="https://github.com/HossamZakariaSannad"
                 target="_blank"
-                class="social-link"
-                aria-label="GitHub"
+                rel="noreferrer"
+                aria-label="GitHub profile"
               >
                 <i class="ri-github-fill"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/hossam-zakaria-s/"
                 target="_blank"
-                class="social-link"
-                aria-label="LinkedIn"
+                rel="noreferrer"
+                aria-label="LinkedIn profile"
               >
-                <i class="ri-linkedin-fill"></i>
+                <i class="ri-linkedin-box-fill"></i>
               </a>
               <a
                 href="https://www.facebook.com/hosam.zico.9/"
                 target="_blank"
-                class="social-link"
-                aria-label="Facebook"
+                rel="noreferrer"
+                aria-label="Facebook profile"
               >
-                <i class="ri-facebook-fill"></i>
+                <i class="ri-facebook-circle-fill"></i>
               </a>
               <a
                 href="https://www.instagram.com/hossam_zakaria_9/"
                 target="_blank"
-                class="social-link"
-                aria-label="Instagram"
+                rel="noreferrer"
+                aria-label="Instagram profile"
               >
                 <i class="ri-instagram-line"></i>
               </a>
             </div>
           </div>
 
-          <div
-            class="hero-image animate-on-scroll"
-            style="animation-delay: 0.2s"
-          >
-            <div class="image-container">
-              <div class="image-border"></div>
-              <img
-                src="res/nobg.png"
-                alt="Hossam Zakaria - Full Stack Developer"
-                class="profile-image"
-              />
-              <div class="image-glow"></div>
-            </div>
-
-            <!-- Floating Elements -->
-            <div class="floating-element" style="top: 10%; right: 10%">
-              <i class="ri-reactjs-line"></i>
-            </div>
-            <div class="floating-element" style="bottom: 20%; left: 5%">
-              <i class="ri-nodejs-line"></i>
-            </div>
-            <div class="floating-element" style="top: 60%; right: 5%">
-              <i class="ri-database-2-line"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-          <div class="scroll-mouse">
-            <div class="scroll-wheel"></div>
-          </div>
-          <span>Scroll Down</span>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="about" id="about">
-        <div class="container">
-          <div class="section-header animate-on-scroll">
-            <span class="section-number">01</span>
-            <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">Get to know me better</p>
-          </div>
-
-          <div class="about-content">
-            <div class="about-text animate-on-scroll">
-              <div class="about-intro">
-                <p>
-                  I'm <strong>Hossam Zakaria</strong>, a passionate Full-Stack
-                  Developer and recent <strong>ITI graduate</strong> from an
-                  intensive 7-month code camp. I hold a Bachelor's degree in
-                  Computer Engineering from Helwan University (2018-2022) with a
-                  Very Good grade (2.83 GPA).
-                </p>
-
-                <p>
-                  I specialize in building scalable web applications using the
-                  <strong>MERN stack</strong> and <strong>Django</strong>. My
-                  experience includes working with cross-functional agile teams,
-                  implementing robust database solutions, and deploying
-                  production-ready applications on cloud platforms.
-                </p>
+          <div class="hero-panel reveal reveal-delay">
+            <div class="profile-card">
+              <div class="profile-badge">
+                <span class="status-dot"></span>
+                Available for freelance and full-time roles
               </div>
 
-              <div class="skills-preview">
-                <h3>Core Technologies</h3>
-                <div class="tech-stack">
-                  <span class="tech-item">React.js</span>
-                  <span class="tech-item">Redux.js</span>
-                  <span class="tech-item">Node.js</span>
-                  <span class="tech-item">Express.js</span>
-                  <span class="tech-item">Python</span>
-                  <span class="tech-item">Django</span>
-                  <span class="tech-item">Flask</span>
-                  <span class="tech-item">MongoDB</span>
-                  <span class="tech-item">PostgreSQL</span>
-                  <span class="tech-item">MySQL</span>
-                  <span class="tech-item">AWS</span>
-                  <span class="tech-item">Docker</span>
+              <div class="profile-visual">
+                <img
+                  src="res/nobg.png"
+                  alt="Portrait of Hossam Zakaria"
+                  class="profile-image"
+                  loading="eager"
+                />
+              </div>
+
+              <div class="profile-meta">
+                <div>
+                  <span class="meta-label">Primary focus</span>
+                  <strong>Frontend-led full-stack delivery</strong>
+                </div>
+                <div>
+                  <span class="meta-label">Stack</span>
+                  <strong>MERN, Django, Python, SQL, AWS</strong>
                 </div>
               </div>
 
-              <div class="languages-section">
-                <h3>Languages</h3>
-                <div class="languages-list">
-                  <div class="language-item">
-                    <span class="language-name">Arabic</span>
-                    <span class="language-level">Native</span>
+              <div class="hero-stats">
+                <article class="metric-card">
+                  <strong>6+</strong>
+                  <span>Shipped portfolio projects</span>
+                </article>
+                <article class="metric-card">
+                  <strong>7</strong>
+                  <span>Months of intensive ITI training</span>
+                </article>
+                <article class="metric-card">
+                  <strong>15+</strong>
+                  <span>Technologies used across projects</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About</p>
+            <h2>Professional summary</h2>
+            <p>
+              A concise snapshot of my background, strengths, and the type of
+              work I enjoy building.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <article class="panel reveal">
+              <h3>Who I am</h3>
+              <p>
+                I am a full-stack developer with a Computer Engineering
+                background and hands-on training from the ITI Intensive Code
+                Camp. I focus on building modern applications that feel smooth
+                for users and remain practical to maintain for teams.
+              </p>
+              <p>
+                My experience spans responsive frontend implementation, backend
+                APIs, database design, authentication, cloud deployment, and
+                collaboration in agile environments. I care about readable code,
+                thoughtful interfaces, and shipping stable products.
+              </p>
+            </article>
+
+            <article class="panel reveal reveal-delay">
+              <h3>What I bring</h3>
+              <div class="feature-list">
+                <div class="feature-item">
+                  <i class="ri-layout-4-line"></i>
+                  <div>
+                    <strong>Strong UI execution</strong>
+                    <p>
+                      Clean layouts, consistent spacing, responsive behavior,
+                      and recruiter-friendly presentation.
+                    </p>
                   </div>
-                  <div class="language-item">
-                    <span class="language-name">English</span>
-                    <span class="language-level">B2 Level</span>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-server-line"></i>
+                  <div>
+                    <strong>Full-stack implementation</strong>
+                    <p>
+                      REST APIs, authentication, data modeling, and production
+                      deployment across JavaScript and Python stacks.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-rocket-2-line"></i>
+                  <div>
+                    <strong>Product mindset</strong>
+                    <p>
+                      I structure work to be performant, maintainable, and easy
+                      for others to extend later.
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section alt-section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Skills</p>
+            <h2>Core capabilities and technologies</h2>
+            <p>
+              Organized for quick scanning by recruiters, hiring managers, and
+              clients.
+            </p>
+          </div>
 
-            <div
-              class="about-stats animate-on-scroll"
-              style="animation-delay: 0.2s"
-            >
-              <div class="stat-card">
-                <div class="stat-number" data-target="6">0</div>
-                <div class="stat-label">Major Projects</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number" data-target="7">0</div>
-                <div class="stat-label">Months ITI Training</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number" data-target="15">0</div>
-                <div class="stat-label">Technologies Mastered</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number" data-target="2">0</div>
-                <div class="stat-label">Certifications</div>
-              </div>
-            </div>
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <div class="skill-card-icon"><i class="ri-code-box-line"></i></div>
+              <h3>Frontend</h3>
+              <p>
+                Building responsive, accessible, and maintainable interfaces
+                with strong visual hierarchy.
+              </p>
+              <ul class="tag-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Redux</li>
+                <li>Responsive UI</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal reveal-delay">
+              <div class="skill-card-icon"><i class="ri-database-2-line"></i></div>
+              <h3>Backend</h3>
+              <p>
+                Designing reliable server-side systems, APIs, and database
+                layers for web applications.
+              </p>
+              <ul class="tag-list">
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>Python</li>
+                <li>Django</li>
+                <li>Flask</li>
+                <li>JWT</li>
+              </ul>
+            </article>
+
+            <article class="skill-card reveal reveal-delay-2">
+              <div class="skill-card-icon"><i class="ri-cloud-line"></i></div>
+              <h3>Data and DevOps</h3>
+              <p>
+                Preparing applications for real-world use with stable data and
+                deployment workflows.
+              </p>
+              <ul class="tag-list">
+                <li>MongoDB</li>
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+                <li>AWS</li>
+                <li>Docker</li>
+                <li>Linux</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Services Section -->
-      <section class="services" id="services">
+      <section class="section" id="projects">
         <div class="container">
-          <div class="section-header animate-on-scroll">
-            <span class="section-number">02</span>
-            <h2 class="section-title">Services</h2>
-            <p class="section-subtitle">What I can do for you</p>
+          <div class="section-heading reveal">
+            <p class="eyebrow">Projects</p>
+            <h2>Selected work</h2>
+            <p>
+              A mix of frontend, full-stack, and AI-driven projects that reflect
+              my range and engineering approach.
+            </p>
           </div>
 
-          <div class="services-grid">
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.1s"
-            >
-              <div class="service-icon">
-                <i class="ri-code-s-slash-line"></i>
-              </div>
-              <h3>Frontend Development</h3>
-              <p>
-                Building responsive and intuitive user interfaces using HTML5,
-                CSS3, JavaScript, React.js, Redux, Tailwind CSS, and Bootstrap
-                for modern web experiences.
-              </p>
-              <div class="service-technologies">
-                <span>React.js</span>
-                <span>JavaScript</span>
-                <span>HTML5/CSS3</span>
-                <span>Tailwind CSS</span>
-              </div>
-            </div>
-
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.2s"
-            >
-              <div class="service-icon">
-                <i class="ri-server-line"></i>
-              </div>
-              <h3>Backend Development</h3>
-              <p>
-                Creating robust server-side applications with Node.js,
-                Express.js, Django, and Flask, integrated with MongoDB, MySQL,
-                and PostgreSQL databases.
-              </p>
-              <div class="service-technologies">
-                <span>Node.js</span>
-                <span>Django</span>
-                <span>Python</span>
-                <span>Express.js</span>
-              </div>
-            </div>
-
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.3s"
-            >
-              <div class="service-icon">
-                <i class="ri-stack-line"></i>
-              </div>
-              <h3>Full Stack Solutions</h3>
-              <p>
-                Delivering end-to-end web applications with seamless integration
-                of frontend and backend technologies using MERN stack and Django
-                framework.
-              </p>
-              <div class="service-technologies">
-                <span>MERN Stack</span>
-                <span>Django</span>
-                <span>RESTful APIs</span>
-                <span>JWT</span>
-              </div>
-            </div>
-
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.4s"
-            >
-              <div class="service-icon">
-                <i class="ri-cloud-line"></i>
-              </div>
-              <h3>Cloud & DevOps</h3>
-              <p>
-                Deploying applications on AWS with Docker, implementing CI/CD
-                pipelines, and managing cloud infrastructure for scalable
-                solutions.
-              </p>
-              <div class="service-technologies">
-                <span>AWS</span>
-                <span>Docker</span>
-                <span>CI/CD</span>
-                <span>Linux</span>
-              </div>
-            </div>
-
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.5s"
-            >
-              <div class="service-icon">
-                <i class="ri-database-2-line"></i>
-              </div>
-              <h3>Database Management</h3>
-              <p>
-                Designing and managing efficient databases with MongoDB, MySQL,
-                PostgreSQL ensuring data integrity, security, and optimal
-                performance.
-              </p>
-              <div class="service-technologies">
-                <span>MongoDB</span>
-                <span>PostgreSQL</span>
-                <span>MySQL</span>
-                <span>Database Admin</span>
-              </div>
-            </div>
-
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.6s"
-            >
-              <div class="service-icon">
-                <i class="ri-robot-line"></i>
-              </div>
-              <h3>AI Integration</h3>
-              <p>
-                Integrating AI models and machine learning solutions into web
-                applications for enhanced user experiences and intelligent
-                automation.
-              </p>
-              <div class="service-technologies">
-                <span>Python</span>
-                <span>AI APIs</span>
-                <span>Computer Vision</span>
-                <span>Deep Learning</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section class="projects" id="projects">
-        <div class="container">
-          <div class="section-header animate-on-scroll">
-            <span class="section-number">03</span>
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Some of my recent work</p>
+          <div class="project-filters reveal" role="toolbar" aria-label="Project filters">
+            <button class="filter-btn is-active" type="button" data-filter="all">
+              All
+            </button>
+            <button class="filter-btn" type="button" data-filter="frontend">
+              Frontend
+            </button>
+            <button class="filter-btn" type="button" data-filter="fullstack">
+              Full Stack
+            </button>
+            <button class="filter-btn" type="button" data-filter="ai">
+              AI / ML
+            </button>
           </div>
 
-          <div class="projects-container">
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.1s"
-            >
-              <div class="project-image">
+          <div class="projects-grid">
+            <article class="project-card reveal" data-category="frontend fullstack">
+              <div class="project-media">
                 <img
                   src="res/mohj.png"
-                  alt="Mohj Educational Services Website"
+                  alt="Screenshot of the Mohj educational services website"
                   loading="lazy"
                 />
-                <div class="project-overlay">
-                  <div class="project-links">
+              </div>
+              <div class="project-body">
+                <div class="project-topline">
+                  <span class="project-type">Frontend / Product Website</span>
+                  <div class="project-actions">
                     <a
                       href="https://github.com/HossamZakariaSannad"
                       target="_blank"
-                      class="project-link"
+                      rel="noreferrer"
+                      aria-label="Open Mohj project source"
                     >
                       <i class="ri-github-line"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
-                    </a>
+                    <span class="project-placeholder" aria-label="Live demo coming soon">Demo pending</span>
                   </div>
                 </div>
-              </div>
-              <div class="project-content">
-                <div class="project-category">React.js Website</div>
-                <h3>Mohj Project – Educational Services</h3>
+                <h3>Mohj Educational Services</h3>
                 <p>
-                  Built a modern multi-page React website for students in Egypt.
-                  Designed fully from a Figma prototype with smooth page
-                  transitions (Framer Motion), responsive RTL support, and
-                  client-side routing using React Router.
+                  A polished multi-page React website for students in Egypt,
+                  built from a Figma concept with responsive layouts, RTL
+                  support, and smooth client-side navigation.
                 </p>
-                <div class="project-tech">
-                  <span>React.js</span>
-                  <span>Framer Motion</span>
-                  <span>React Router</span>
-                  <span>RTL Support</span>
-                </div>
+                <ul class="tag-list">
+                  <li>React.js</li>
+                  <li>React Router</li>
+                  <li>Framer Motion</li>
+                  <li>RTL Support</li>
+                </ul>
               </div>
-            </div>
+            </article>
 
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.2s"
-            >
-              <div class="project-image">
+            <article class="project-card reveal reveal-delay" data-category="fullstack ai">
+              <div class="project-media">
                 <img
                   src="res/task.png"
-                  alt="Task Flow - AI Project Management"
+                  alt="Screenshot of Task Flow AI project management application"
                   loading="lazy"
                 />
-                <div class="project-overlay">
-                  <div class="project-links">
+              </div>
+              <div class="project-body">
+                <div class="project-topline">
+                  <span class="project-type">Full Stack / AI</span>
+                  <div class="project-actions">
                     <a
                       href="https://github.com/HossamZakariaSannad/TasksManagmentSystem"
                       target="_blank"
-                      class="project-link"
+                      rel="noreferrer"
+                      aria-label="Open Task Flow source"
                     >
                       <i class="ri-github-line"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
-                    </a>
+                    <span class="project-placeholder" aria-label="Live demo coming soon">Demo pending</span>
                   </div>
                 </div>
-              </div>
-              <div class="project-content">
-                <div class="project-category">AI-Powered App</div>
-                <h3>Task Flow: AI-Powered Task Management</h3>
+                <h3>Task Flow</h3>
                 <p>
-                  Developed an AI-enhanced web application to streamline project
-                  management, task tracking, and team collaboration. Integrated
-                  a multi-model AI Chatbot (via Together AI, 5 LLMs) and BERT
-                  model for intelligent assignment generation.
+                  An AI-powered task management platform for collaboration,
+                  tracking, and smart assignment generation using multiple LLMs
+                  and a BERT-based workflow assistant.
                 </p>
-                <div class="project-tech">
-                  <span>MERN Stack</span>
-                  <span>AI Integration</span>
-                  <span>BERT</span>
-                  <span>Together AI</span>
-                </div>
+                <ul class="tag-list">
+                  <li>MERN Stack</li>
+                  <li>Together AI</li>
+                  <li>BERT</li>
+                  <li>Team Collaboration</li>
+                </ul>
               </div>
-            </div>
+            </article>
 
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.3s"
-            >
-              <div class="project-image">
+            <article class="project-card reveal reveal-delay-2" data-category="fullstack">
+              <div class="project-media">
                 <img
                   src="res/goodreads.png"
-                  alt="GoodReads Clone - MERN Application"
+                  alt="Screenshot of GoodReads clone application"
                   loading="lazy"
                 />
-                <div class="project-overlay">
-                  <div class="project-links">
+              </div>
+              <div class="project-body">
+                <div class="project-topline">
+                  <span class="project-type">Full Stack</span>
+                  <div class="project-actions">
                     <a
                       href="https://github.com/HossamZakariaSannad/Goodreads-App"
                       target="_blank"
-                      class="project-link"
+                      rel="noreferrer"
+                      aria-label="Open GoodReads clone source"
                     >
                       <i class="ri-github-line"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
-                    </a>
+                    <span class="project-placeholder" aria-label="Live demo coming soon">Demo pending</span>
                   </div>
                 </div>
-              </div>
-              <div class="project-content">
-                <div class="project-category">Full Stack App</div>
-                <h3>GoodReads Clone – MERN Stack</h3>
+                <h3>GoodReads Clone</h3>
                 <p>
-                  Built a full-stack book management web application using the
-                  MERN stack. Features secure authentication, efficient book
-                  catalog management, advanced search, and responsive UI.
+                  A MERN application for managing book discovery and reading
+                  activity with secure authentication, search, and a clean
+                  responsive interface.
                 </p>
-                <div class="project-tech">
-                  <span>MongoDB</span>
-                  <span>Express.js</span>
-                  <span>React.js</span>
-                  <span>Node.js</span>
-                </div>
+                <ul class="tag-list">
+                  <li>MongoDB</li>
+                  <li>Express.js</li>
+                  <li>React.js</li>
+                  <li>Node.js</li>
+                </ul>
               </div>
-            </div>
-
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.4s"
-            >
-              <div class="project-image">
+            </article>
+            <article class="project-card reveal" data-category="frontend">
+              <div class="project-media">
                 <img
                   src="res/e-commerce.png"
-                  alt="E-Commerce Platform"
+                  alt="Screenshot of vanilla JavaScript e-commerce platform"
                   loading="lazy"
                 />
-                <div class="project-overlay">
-                  <div class="project-links">
+              </div>
+              <div class="project-body">
+                <div class="project-topline">
+                  <span class="project-type">Frontend</span>
+                  <div class="project-actions">
                     <a
                       href="https://github.com/HossamZakariaSannad/E-Commerce-Vanilla-ITI"
                       target="_blank"
-                      class="project-link"
+                      rel="noreferrer"
+                      aria-label="Open e-commerce platform source"
                     >
                       <i class="ri-github-line"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
-                    </a>
+                    <span class="project-placeholder" aria-label="Live demo coming soon">Demo pending</span>
                   </div>
                 </div>
-              </div>
-              <div class="project-content">
-                <div class="project-category">Frontend Project</div>
                 <h3>Vanilla JS E-Commerce Platform</h3>
                 <p>
-                  Developed an e-commerce platform using HTML, CSS, and ES6
-                  JavaScript with Bootstrap. Features product browsing, cart
-                  functionality, and streamlined checkout experience.
+                  A front-end commerce experience focused on browsing, cart
+                  interactions, and a straightforward checkout flow using HTML,
+                  CSS, and modern JavaScript.
                 </p>
-                <div class="project-tech">
-                  <span>HTML5</span>
-                  <span>CSS3</span>
-                  <span>JavaScript ES6</span>
-                  <span>Bootstrap</span>
-                </div>
+                <ul class="tag-list">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                  <li>Bootstrap</li>
+                </ul>
               </div>
-            </div>
+            </article>
 
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.5s"
-            >
-              <div class="project-image">
+            <article class="project-card reveal reveal-delay" data-category="fullstack">
+              <div class="project-media">
                 <img
                   src="res/dbms.png"
-                  alt="Database Engine - Bash Script"
+                  alt="Screenshot of Bash database engine project"
                   loading="lazy"
                 />
-                <div class="project-overlay">
-                  <div class="project-links">
+              </div>
+              <div class="project-body">
+                <div class="project-topline">
+                  <span class="project-type">Systems / Backend</span>
+                  <div class="project-actions">
                     <a
                       href="https://github.com/HossamZakariaSannad/DataBase-MS-BashScript"
                       target="_blank"
-                      class="project-link"
+                      rel="noreferrer"
+                      aria-label="Open Bash database engine source"
                     >
                       <i class="ri-github-line"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
-                    </a>
+                    <span class="project-placeholder" aria-label="Live demo coming soon">Demo pending</span>
                   </div>
                 </div>
-              </div>
-              <div class="project-content">
-                <div class="project-category">System Programming</div>
-                <h3>Database Engine using Bash</h3>
+                <h3>Database Engine with Bash</h3>
                 <p>
-                  Developed a Bash-based Database Engine with a GUI for data
-                  storage and retrieval. Implements core database
-                  functionalities using shell scripting for UNIX-based systems.
+                  A shell-scripted database engine with a GUI layer that handles
+                  data creation, retrieval, and core database operations on
+                  UNIX-based systems.
                 </p>
-                <div class="project-tech">
-                  <span>Bash</span>
-                  <span>Linux</span>
-                  <span>Shell Scripting</span>
-                  <span>GUI</span>
-                </div>
+                <ul class="tag-list">
+                  <li>Bash</li>
+                  <li>Linux</li>
+                  <li>Shell Scripting</li>
+                  <li>GUI</li>
+                </ul>
               </div>
-            </div>
+            </article>
 
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.6s"
-            >
-              <div class="project-image">
+            <article class="project-card reveal reveal-delay-2" data-category="ai">
+              <div class="project-media">
                 <img
                   src="res/openpose.jpg"
-                  alt="MUSCLE RECYCLER - AI Physiotherapy"
+                  alt="Screenshot of MUSCLE RECYCLER physiotherapy detector"
                   loading="lazy"
                 />
-                <div class="project-overlay">
-                  <div class="project-links">
+              </div>
+              <div class="project-body">
+                <div class="project-topline">
+                  <span class="project-type">AI / Computer Vision</span>
+                  <div class="project-actions">
                     <a
                       href="https://github.com/HossamZakariaSannad/MUSCLE-RECYCLER"
                       target="_blank"
-                      class="project-link"
+                      rel="noreferrer"
+                      aria-label="Open MUSCLE RECYCLER source"
                     >
                       <i class="ri-github-line"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
-                    </a>
+                    <span class="project-placeholder" aria-label="Live demo coming soon">Demo pending</span>
                   </div>
                 </div>
-              </div>
-              <div class="project-content">
-                <div class="project-category">AI/ML Project</div>
-                <h3>MUSCLE RECYCLER – Physiotherapy Detector</h3>
+                <h3>MUSCLE RECYCLER</h3>
                 <p>
-                  Developed an AI-powered physiotherapy exercise detector using
-                  Python, Deep Learning, Computer Vision, Blender, and OpenPose.
-                  Provides real-time feedback based on detected human poses.
-                  Grade: Excellent
+                  An AI-assisted physiotherapy exercise detector built with
+                  computer vision and deep learning to analyze poses and provide
+                  real-time exercise feedback.
                 </p>
-                <div class="project-tech">
-                  <span>Python</span>
-                  <span>Deep Learning</span>
-                  <span>OpenPose</span>
-                  <span>Computer Vision</span>
-                </div>
+                <ul class="tag-list">
+                  <li>Python</li>
+                  <li>Deep Learning</li>
+                  <li>OpenPose</li>
+                  <li>Computer Vision</li>
+                </ul>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section class="contact" id="contact">
+      <section class="section alt-section" id="journey">
         <div class="container">
-          <div class="section-header animate-on-scroll">
-            <span class="section-number">04</span>
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Let's work together</p>
+          <div class="section-heading reveal">
+            <p class="eyebrow">Journey</p>
+            <h2>Experience, education, and credentials</h2>
+            <p>
+              The milestones that shaped my technical foundation and delivery
+              approach.
+            </p>
           </div>
 
-          <div class="contact-content">
-            <div class="contact-info animate-on-scroll">
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="ri-mail-line"></i>
+          <div class="timeline-grid">
+            <article class="timeline-panel reveal">
+              <h3>Experience focus</h3>
+              <div class="timeline-list">
+                <div class="timeline-item">
+                  <span class="timeline-date">Recent</span>
+                  <div>
+                    <strong>Full-stack project delivery</strong>
+                    <p>
+                      Built applications across MERN, Django, AI integration,
+                      and responsive product interfaces with agile teamwork.
+                    </p>
+                  </div>
                 </div>
-                <div class="contact-details">
-                  <h3>Email</h3>
+                <div class="timeline-item">
+                  <span class="timeline-date">Core strength</span>
+                  <div>
+                    <strong>Frontend-led engineering</strong>
+                    <p>
+                      Translating requirements into clean layouts, solid UX,
+                      accessible markup, and maintainable code structure.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-panel reveal reveal-delay">
+              <h3>Education</h3>
+              <div class="timeline-list">
+                <div class="timeline-item">
+                  <span class="timeline-date">2024 - 2025</span>
+                  <div>
+                    <strong>ITI Intensive Code Camp</strong>
+                    <p>
+                      Seven-month full-stack training focused on MERN, Django,
+                      databases, deployment, and collaborative development.
+                    </p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-date">2018 - 2022</span>
+                  <div>
+                    <strong>Helwan University</strong>
+                    <p>
+                      Bachelor of Computer Engineering with a Very Good grade and
+                      a strong software engineering foundation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-panel reveal reveal-delay-2">
+              <h3>Certificates and strengths</h3>
+              <ul class="credential-list">
+                <li>ITI full-stack intensive training certificate</li>
+                <li>Computer Engineering academic foundation</li>
+                <li>Arabic: Native</li>
+                <li>English: B2 working proficiency</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section contact-section" id="contact">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s build something valuable</h2>
+            <p>
+              Open to product, frontend, and full-stack opportunities. If you
+              have a role or project in mind, send the details and I’ll respond
+              as soon as possible.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <aside class="contact-panel reveal">
+              <div class="contact-card">
+                <i class="ri-mail-line"></i>
+                <div>
+                  <span>Email</span>
                   <a href="mailto:hossamzakaria1212@gmail.com"
                     >hossamzakaria1212@gmail.com</a
                   >
                 </div>
               </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="ri-phone-line"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>Phone</h3>
-                  <a href="https://wa.me/201141524467" target="_blank"
+              <div class="contact-card">
+                <i class="ri-phone-line"></i>
+                <div>
+                  <span>Phone / WhatsApp</span>
+                  <a href="https://wa.me/201141524467" target="_blank" rel="noreferrer"
                     >+20 114 152 4467</a
                   >
                 </div>
               </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="ri-map-pin-line"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>Location</h3>
-                  <span>Cairo , Egypt</span>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="ri-linkedin-line"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>LinkedIn</h3>
+              <div class="contact-card">
+                <i class="ri-linkedin-line"></i>
+                <div>
+                  <span>LinkedIn</span>
                   <a
                     href="https://www.linkedin.com/in/hossam-zakaria-s/"
                     target="_blank"
+                    rel="noreferrer"
                     >linkedin.com/in/hossam-zakaria-s</a
                   >
                 </div>
               </div>
-            </div>
+              <div class="contact-card">
+                <i class="ri-map-pin-line"></i>
+                <div>
+                  <span>Location</span>
+                  <p>Cairo, Egypt</p>
+                </div>
+              </div>
+            </aside>
 
             <form
-              class="contact-form animate-on-scroll"
-              style="animation-delay: 0.2s"
+              class="contact-form panel reveal reveal-delay"
               action="https://formsubmit.co/hossamzakaria1212@gmail.com"
               method="POST"
               id="contact-form"
@@ -794,62 +749,83 @@
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
 
-              <div class="form-group">
-                <input type="text" name="name" id="name" required />
-                <label for="name">Your Name </label>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name">Full name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
               </div>
 
-              <div class="form-group">
-                <input type="email" name="email" id="email" required />
-                <label for="email">Your Email </label>
-              </div>
-
-              <div class="form-group">
-                <input type="text" name="subject" id="subject" required />
+              <div class="form-field">
                 <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
               </div>
 
-              <div class="form-group">
+              <div class="form-field">
+                <label for="message">Project details</label>
                 <textarea
-                  name="message"
                   id="message"
-                  rows="6"
+                  name="message"
+                  rows="7"
+                  placeholder="Tell me about the role, timeline, or project scope."
                   required
                 ></textarea>
-                <label for="message">Your Message </label>
               </div>
 
-              <button type="submit" class="btn btn-primary">
+              <button class="btn btn-primary" type="submit">
                 <i class="ri-send-plane-line"></i>
                 <span>Send Message</span>
               </button>
+              <p class="form-note">
+                You can also contact me directly by email or LinkedIn if you
+                prefer.
+              </p>
             </form>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-text">
-            <p>&copy; 2025 Hossam Zakaria. All rights reserved.</p>
-          </div>
-          <div class="footer-links">
-            <a href="#home">Privacy Policy</a>
-            <a href="#home">Terms of Service</a>
-          </div>
+      <div class="container footer-content">
+        <div>
+          <p class="footer-brand">Hossam Zakaria</p>
+          <p class="footer-copy">
+            Full-stack developer focused on polished interfaces and dependable
+            backend delivery.
+          </p>
         </div>
+        <div class="footer-links">
+          <a href="#projects">Projects</a>
+          <a href="#journey">Journey</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p class="footer-meta">&copy; 2026 Hossam Zakaria. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
       <i class="ri-arrow-up-line"></i>
     </button>
 
-    <!-- Scripts -->
     <script src="animations.js"></script>
   </body>
 </html>
+
+
