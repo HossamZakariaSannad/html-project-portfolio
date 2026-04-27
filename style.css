@@ -1038,9 +1038,6 @@ section {
   margin-bottom: var(--space-32);
 }
 
-.title-line {
-  display: block;
-}
 
 .title-accent {
   background: var(--gradient-primary);
