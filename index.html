@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Hossam Zakaria - Full Stack Developer Portfolio. Expert in MERN stack, Django, Python, React.js, and modern web technologies."
+      content="Hossam Zakaria - Oracle Fusion Technical Consultant. Expert in Oracle Fusion ERP, SQL, PL/SQL, Oracle APEX, and Cloud Integration."
     />
     <meta
       name="keywords"
-      content="Full Stack Developer, MERN Stack, Django, React.js, Node.js, Python, Web Developer, Portfolio"
+      content="Oracle Fusion Consultant, Oracle SQL, PL/SQL Developer, Oracle APEX, Oracle Integration Cloud, OIC, Backend Developer, Database Developer, Oracle Fusion ERP"
     />
     <meta name="author" content="Hossam Zakaria" />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Hossam Zakaria | Full Stack Developer" />
+    <meta property="og:title" content="Hossam Zakaria | Oracle Fusion Technical Consultant" />
     <meta
       property="og:description"
-      content="Expert Full Stack Developer specializing in MERN stack and Django. Building scalable, high-performance web applications."
+      content="Oracle Fusion Technical Consultant specializing in Oracle ERP, SQL/PL/SQL, Oracle APEX, and Cloud Integration. ITI graduate with strong backend and database expertise."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -25,10 +25,26 @@
       content="https://hossamzakariasannad.github.io/html-project-portfolio/"
     />
 
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hossam Zakaria",
+        "jobTitle": "Oracle Fusion Technical Consultant",
+        "url": "https://hossamzakariasannad.github.io/html-project-portfolio/",
+        "knowsAbout": ["Oracle Fusion ERP", "SQL", "PL/SQL", "Oracle APEX", "Oracle Integration Cloud", "Backend Development", "Database Design"],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Helwan University - Faculty of Computers & Artificial Intelligence"
+        }
+      }
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="res/favicon.svg" />
     <link rel="manifest" href="res/site.webmanifest" />
-    <meta name="theme-color" content="#00ffcc" />
+    <meta name="theme-color" content="#21808d" />
 
     <!-- Fonts -->
     <link
@@ -43,11 +59,11 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>Hossam Zakaria | Full Stack Developer Portfolio</title>
+    <title>Hossam Zakaria | Oracle Fusion Technical Consultant</title>
   </head>
   <body>
     <!-- Loading Screen -->
-    <div class="loader-overlay">
+    <div class="loader-overlay" id="loader" role="alert" aria-label="Loading">
       <div class="loader-container">
         <div class="loader-animation">
           <div class="loader-dot"></div>
@@ -59,51 +75,44 @@
     </div>
 
     <!-- Scroll Progress Bar -->
-    <div class="scroll-progress"></div>
-
-    <!-- Cursor -->
-    <div class="custom-cursor">
-      <div class="cursor-dot"></div>
-      <div class="cursor-outline"></div>
-    </div>
-
-    <!-- Background Particles -->
-    <div class="particles-container">
-      <canvas id="particles-canvas"></canvas>
-    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-container">
-        <a href="#home" class="nav-logo">
+        <a href="#home" class="nav-logo" aria-label="Hossam Zakaria Home">
           <span class="logo-text">Hossam</span>
           <span class="logo-accent">Zakaria</span>
         </a>
 
-        <div class="nav-menu" id="nav-menu">
-          <a href="#home" class="nav-link active" data-section="home">
-            <i class="ri-home-4-line nav-icon"></i>
+        <div class="nav-menu" id="nav-menu" role="menubar">
+          <a href="#home" class="nav-link active" data-section="home" role="menuitem">
+            <i class="ri-home-4-line nav-icon" aria-hidden="true"></i>
             <span>Home</span>
           </a>
-          <a href="#about" class="nav-link" data-section="about">
-            <i class="ri-user-3-line nav-icon"></i>
+          <a href="#about" class="nav-link" data-section="about" role="menuitem">
+            <i class="ri-user-3-line nav-icon" aria-hidden="true"></i>
             <span>About</span>
           </a>
-          <a href="#services" class="nav-link" data-section="services">
-            <i class="ri-service-line nav-icon"></i>
+          <a href="#experience" class="nav-link" data-section="experience" role="menuitem">
+            <i class="ri-briefcase-4-line nav-icon" aria-hidden="true"></i>
+            <span>Experience</span>
+          </a>
+          <a href="#services" class="nav-link" data-section="services" role="menuitem">
+            <i class="ri-service-line nav-icon" aria-hidden="true"></i>
             <span>Services</span>
           </a>
-          <a href="#projects" class="nav-link" data-section="projects">
-            <i class="ri-folder-3-line nav-icon"></i>
+          <a href="#projects" class="nav-link" data-section="projects" role="menuitem">
+            <i class="ri-folder-3-line nav-icon" aria-hidden="true"></i>
             <span>Projects</span>
           </a>
-          <a href="#contact" class="nav-link" data-section="contact">
-            <i class="ri-mail-line nav-icon"></i>
+          <a href="#contact" class="nav-link" data-section="contact" role="menuitem">
+            <i class="ri-mail-line nav-icon" aria-hidden="true"></i>
             <span>Contact</span>
           </a>
         </div>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -117,6 +126,11 @@
       <section class="hero" id="home">
         <div class="hero-container">
           <div class="hero-content animate-on-scroll">
+            <div class="hero-greeting">
+              <span class="greeting-text">Hello, I'm</span>
+              <span class="greeting-wave" aria-hidden="true">👋</span>
+            </div>
+            
             <h1 class="hero-title">
               <span class="title-line">Hossam</span>
               <span class="title-line title-accent">Zakaria</span>
@@ -124,31 +138,30 @@
 
             <div class="hero-subtitle">
               <span class="typing-text" id="typing-text"></span>
-              <span class="cursor-blink">|</span>
+              <span class="cursor-blink" aria-hidden="true">|</span>
             </div>
 
             <p class="hero-description">
-              ITI graduate from an Intensive Code Camp specializing in
-              <strong>MERN stack</strong> and <strong>Django</strong>.
-              Experienced in building scalable web applications using
-              <strong>React.js</strong>, <strong>Node.js</strong>,
-              <strong>Express.js</strong>, <strong>Python</strong>, and modern
-              deployment with <strong>AWS</strong> and <strong>Docker</strong>.
-              Passionate about creating impactful projects with clean, efficient
-              code.
+              <strong>Oracle Fusion Technical Consultant</strong> with strong backend and database background. 
+              ITI graduate with 7 months of intensive training in 
+              <strong>Oracle Fusion ERP</strong>, <strong>SQL/PL/SQL</strong>, 
+              <strong>Oracle APEX</strong>, and <strong>Cloud Integration (OIC)</strong>. 
+              Experienced in building scalable solutions, REST APIs, and database design 
+              using modern software engineering practices.
             </p>
 
             <div class="hero-buttons">
               <a
-                href="https://drive.google.com/file/d/1LW6YRiupjAACYniKepDN4J32lD5FQOJe/view?usp=sharing"
+                href="https://drive.google.com/file/d/1b_0Z_uo1a2fbKZ1Ez3IFDDLgChok4UEW/view?usp=sharing"
                 target="_blank"
                 class="btn btn-primary"
+                rel="noopener noreferrer"
               >
-                <i class="ri-download-line"></i>
+                <i class="ri-download-line" aria-hidden="true"></i>
                 <span>Download CV</span>
               </a>
               <a href="#projects" class="btn btn-secondary">
-                <i class="ri-eye-line"></i>
+                <i class="ri-eye-line" aria-hidden="true"></i>
                 <span>View Projects</span>
               </a>
             </div>
@@ -158,33 +171,37 @@
                 href="https://github.com/HossamZakariaSannad"
                 target="_blank"
                 class="social-link"
-                aria-label="GitHub"
+                aria-label="GitHub Profile"
+                rel="noopener noreferrer"
               >
-                <i class="ri-github-fill"></i>
+                <i class="ri-github-fill" aria-hidden="true"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/hossam-zakaria-s/"
                 target="_blank"
                 class="social-link"
-                aria-label="LinkedIn"
+                aria-label="LinkedIn Profile"
+                rel="noopener noreferrer"
               >
-                <i class="ri-linkedin-fill"></i>
+                <i class="ri-linkedin-fill" aria-hidden="true"></i>
               </a>
               <a
                 href="https://www.facebook.com/hosam.zico.9/"
                 target="_blank"
                 class="social-link"
-                aria-label="Facebook"
+                aria-label="Facebook Profile"
+                rel="noopener noreferrer"
               >
-                <i class="ri-facebook-fill"></i>
+                <i class="ri-facebook-fill" aria-hidden="true"></i>
               </a>
               <a
                 href="https://www.instagram.com/hossam_zakaria_9/"
                 target="_blank"
                 class="social-link"
-                aria-label="Instagram"
+                aria-label="Instagram Profile"
+                rel="noopener noreferrer"
               >
-                <i class="ri-instagram-line"></i>
+                <i class="ri-instagram-line" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -194,30 +211,32 @@
             style="animation-delay: 0.2s"
           >
             <div class="image-container">
-              <div class="image-border"></div>
+              <div class="image-border" aria-hidden="true"></div>
               <img
                 src="res/nobg.png"
-                alt="Hossam Zakaria - Full Stack Developer"
+                alt="Hossam Zakaria - Oracle Fusion Technical Consultant"
                 class="profile-image"
+                width="400"
+                height="400"
               />
-              <div class="image-glow"></div>
+              <div class="image-glow" aria-hidden="true"></div>
             </div>
 
             <!-- Floating Elements -->
-            <div class="floating-element" style="top: 10%; right: 10%">
-              <i class="ri-reactjs-line"></i>
-            </div>
-            <div class="floating-element" style="bottom: 20%; left: 5%">
-              <i class="ri-nodejs-line"></i>
-            </div>
-            <div class="floating-element" style="top: 60%; right: 5%">
+            <div class="floating-element" style="top: 10%; right: 10%" aria-hidden="true">
               <i class="ri-database-2-line"></i>
+            </div>
+            <div class="floating-element" style="bottom: 20%; left: 5%" aria-hidden="true">
+              <i class="ri-cloud-line"></i>
+            </div>
+            <div class="floating-element" style="top: 60%; right: 5%" aria-hidden="true">
+              <i class="ri-code-s-slash-line"></i>
             </div>
           </div>
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" aria-hidden="true">
           <div class="scroll-mouse">
             <div class="scroll-wheel"></div>
           </div>
@@ -231,44 +250,43 @@
           <div class="section-header animate-on-scroll">
             <span class="section-number">01</span>
             <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">Get to know me better</p>
+            <p class="section-subtitle">Oracle Fusion Technical Consultant & Backend Specialist</p>
           </div>
 
           <div class="about-content">
             <div class="about-text animate-on-scroll">
               <div class="about-intro">
                 <p>
-                  I'm <strong>Hossam Zakaria</strong>, a passionate Full-Stack
-                  Developer and recent <strong>ITI graduate</strong> from an
-                  intensive 7-month code camp. I hold a Bachelor's degree in
-                  Computer Engineering from Helwan University (2018-2022) with a
-                  Very Good grade (2.83 GPA).
+                  I'm <strong>Hossam Zakaria</strong>, an Oracle Fusion Technical Consultant and 
+                  recent <strong>ITI graduate</strong> from an intensive 7-month training program. 
+                  I hold a Bachelor's degree in Computer Science from the Faculty of Computers & 
+                  Artificial Intelligence, Helwan University, with a Very Good grade.
                 </p>
 
                 <p>
-                  I specialize in building scalable web applications using the
-                  <strong>MERN stack</strong> and <strong>Django</strong>. My
-                  experience includes working with cross-functional agile teams,
-                  implementing robust database solutions, and deploying
-                  production-ready applications on cloud platforms.
+                  My expertise spans <strong>Oracle Fusion ERP</strong> applications, 
+                  <strong>SQL/PL/SQL</strong> development, <strong>Oracle APEX</strong>, and 
+                  <strong>Oracle Integration Cloud (OIC/ICS)</strong>. I specialize in customizing, 
+                  integrating, and extending Oracle Fusion applications, combined with strong 
+                  backend development skills in Node.js, REST APIs, and database design.
                 </p>
               </div>
 
               <div class="skills-preview">
                 <h3>Core Technologies</h3>
                 <div class="tech-stack">
-                  <span class="tech-item">React.js</span>
-                  <span class="tech-item">Redux.js</span>
+                  <span class="tech-item">Oracle Fusion ERP</span>
+                  <span class="tech-item">Oracle SQL</span>
+                  <span class="tech-item">PL/SQL</span>
+                  <span class="tech-item">Oracle APEX</span>
+                  <span class="tech-item">OIC/ICS</span>
+                  <span class="tech-item">REST/SOAP APIs</span>
+                  <span class="tech-item">Java SE</span>
                   <span class="tech-item">Node.js</span>
                   <span class="tech-item">Express.js</span>
-                  <span class="tech-item">Python</span>
-                  <span class="tech-item">Django</span>
-                  <span class="tech-item">Flask</span>
-                  <span class="tech-item">MongoDB</span>
                   <span class="tech-item">PostgreSQL</span>
-                  <span class="tech-item">MySQL</span>
-                  <span class="tech-item">AWS</span>
-                  <span class="tech-item">Docker</span>
+                  <span class="tech-item">MongoDB</span>
+                  <span class="tech-item">JavaScript</span>
                 </div>
               </div>
 
@@ -312,139 +330,173 @@
         </div>
       </section>
 
+      <!-- Experience Section (NEW) -->
+      <section class="experience" id="experience">
+        <div class="container">
+          <div class="section-header animate-on-scroll">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">My professional journey</p>
+          </div>
+
+          <div class="experience-timeline">
+            <div class="experience-card animate-on-scroll">
+              <div class="experience-header">
+                <div class="experience-company">
+                  <i class="ri-building-4-line" aria-hidden="true"></i>
+                  <h3>Next Academy</h3>
+                </div>
+                <div class="experience-badge">Current</div>
+              </div>
+              <h4 class="experience-role">Oracle Fusion Technical Consultant Trainee</h4>
+              <div class="experience-meta">
+                <span><i class="ri-calendar-line" aria-hidden="true"></i> Dec 2025 - Present</span>
+                <span><i class="ri-map-pin-line" aria-hidden="true"></i> Cairo, Egypt</span>
+              </div>
+              <ul class="experience-details">
+                <li>Training on Oracle Fusion Cloud ERP applications and core business processes</li>
+                <li>Developed SQL and PL/SQL scripts for data manipulation, validation, and reporting</li>
+                <li>Built Oracle APEX applications integrated with Oracle databases</li>
+                <li>Worked with SOAP and REST web services for Oracle Fusion integrations</li>
+                <li>Practiced Oracle Fusion ERP customizations and extensions</li>
+                <li>Gained hands-on experience with Oracle Integration Cloud (ICS/OIC) and PCS</li>
+                <li>Created and analyzed OTBI reports and dashboards</li>
+              </ul>
+            </div>
+
+            <div class="experience-card animate-on-scroll" style="animation-delay: 0.2s">
+              <div class="experience-header">
+                <div class="experience-company">
+                  <i class="ri-building-4-line" aria-hidden="true"></i>
+                  <h3>Beyond Apps Group</h3>
+                </div>
+              </div>
+              <h4 class="experience-role">Full-Stack Developer</h4>
+              <div class="experience-meta">
+                <span><i class="ri-calendar-line" aria-hidden="true"></i> Sep 2025 - Dec 2025</span>
+                <span><i class="ri-map-pin-line" aria-hidden="true"></i> Cairo, Egypt</span>
+              </div>
+              <ul class="experience-details">
+                <li>Developed backend services and RESTful APIs for production web applications</li>
+                <li>Completed a 7-month intensive training program focused on backend development</li>
+                <li>Designed and implemented RESTful APIs using Node.js and Express.js</li>
+                <li>Built and managed relational and NoSQL databases (PostgreSQL, MongoDB)</li>
+                <li>Applied SDLC and Agile practices in team-based projects</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Services Section -->
       <section class="services" id="services">
         <div class="container">
           <div class="section-header animate-on-scroll">
-            <span class="section-number">02</span>
+            <span class="section-number">03</span>
             <h2 class="section-title">Services</h2>
             <p class="section-subtitle">What I can do for you</p>
           </div>
 
           <div class="services-grid">
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.1s"
-            >
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.1s">
               <div class="service-icon">
-                <i class="ri-code-s-slash-line"></i>
+                <i class="ri-building-2-line"></i>
               </div>
-              <h3>Frontend Development</h3>
+              <h3>Oracle Fusion ERP Customization</h3>
               <p>
-                Building responsive and intuitive user interfaces using HTML5,
-                CSS3, JavaScript, React.js, Redux, Tailwind CSS, and Bootstrap
-                for modern web experiences.
+                Customizing and extending Oracle Fusion Cloud ERP applications to meet 
+                specific business requirements. Implementing custom solutions and Redwood UI extensions.
               </p>
               <div class="service-technologies">
-                <span>React.js</span>
-                <span>JavaScript</span>
-                <span>HTML5/CSS3</span>
-                <span>Tailwind CSS</span>
+                <span>Oracle Fusion ERP</span>
+                <span>Redwood UI</span>
+                <span>VBCS</span>
+                <span>Custom Extensions</span>
               </div>
             </div>
 
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.2s"
-            >
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.2s">
+              <div class="service-icon">
+                <i class="ri-database-2-line"></i>
+              </div>
+              <h3>Oracle Database Development</h3>
+              <p>
+                Developing efficient database solutions using Oracle SQL and PL/SQL. 
+                Creating stored procedures, functions, triggers, and optimizing queries for performance.
+              </p>
+              <div class="service-technologies">
+                <span>Oracle SQL</span>
+                <span>PL/SQL</span>
+                <span>Database Design</span>
+                <span>Query Optimization</span>
+              </div>
+            </div>
+
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.3s">
+              <div class="service-icon">
+                <i class="ri-cloud-line"></i>
+              </div>
+              <h3>Cloud Integration Services</h3>
+              <p>
+                Building and managing integrations using Oracle Integration Cloud (OIC/ICS) 
+                and Process Cloud Service (PCS). Connecting Oracle Fusion with third-party systems.
+              </p>
+              <div class="service-technologies">
+                <span>OIC/ICS</span>
+                <span>PCS</span>
+                <span>SOAP APIs</span>
+                <span>REST APIs</span>
+              </div>
+            </div>
+
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.4s">
+              <div class="service-icon">
+                <i class="ri-code-box-line"></i>
+              </div>
+              <h3>Oracle APEX Development</h3>
+              <p>
+                Building modern web applications with Oracle APEX integrated with Oracle databases. 
+                Creating responsive dashboards, reports, and data-driven solutions.
+              </p>
+              <div class="service-technologies">
+                <span>Oracle APEX</span>
+                <span>REST APIs</span>
+                <span>Interactive Reports</span>
+                <span>Dashboards</span>
+              </div>
+            </div>
+
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.5s">
+              <div class="service-icon">
+                <i class="ri-bar-chart-box-line"></i>
+              </div>
+              <h3>BI Reporting & Analytics</h3>
+              <p>
+                Creating and analyzing OTBI reports and dashboards for business intelligence. 
+                Extracting insights from Oracle Fusion data for informed decision-making.
+              </p>
+              <div class="service-technologies">
+                <span>OTBI Reports</span>
+                <span>BI Publisher</span>
+                <span>Dashboards</span>
+                <span>Data Analysis</span>
+              </div>
+            </div>
+
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.6s">
               <div class="service-icon">
                 <i class="ri-server-line"></i>
               </div>
               <h3>Backend Development</h3>
               <p>
-                Creating robust server-side applications with Node.js,
-                Express.js, Django, and Flask, integrated with MongoDB, MySQL,
-                and PostgreSQL databases.
+                Building robust server-side applications with Node.js and Express.js. 
+                Designing RESTful APIs and managing databases for scalable web solutions.
               </p>
               <div class="service-technologies">
                 <span>Node.js</span>
-                <span>Django</span>
-                <span>Python</span>
                 <span>Express.js</span>
-              </div>
-            </div>
-
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.3s"
-            >
-              <div class="service-icon">
-                <i class="ri-stack-line"></i>
-              </div>
-              <h3>Full Stack Solutions</h3>
-              <p>
-                Delivering end-to-end web applications with seamless integration
-                of frontend and backend technologies using MERN stack and Django
-                framework.
-              </p>
-              <div class="service-technologies">
-                <span>MERN Stack</span>
-                <span>Django</span>
-                <span>RESTful APIs</span>
-                <span>JWT</span>
-              </div>
-            </div>
-
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.4s"
-            >
-              <div class="service-icon">
-                <i class="ri-cloud-line"></i>
-              </div>
-              <h3>Cloud & DevOps</h3>
-              <p>
-                Deploying applications on AWS with Docker, implementing CI/CD
-                pipelines, and managing cloud infrastructure for scalable
-                solutions.
-              </p>
-              <div class="service-technologies">
-                <span>AWS</span>
-                <span>Docker</span>
-                <span>CI/CD</span>
-                <span>Linux</span>
-              </div>
-            </div>
-
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.5s"
-            >
-              <div class="service-icon">
-                <i class="ri-database-2-line"></i>
-              </div>
-              <h3>Database Management</h3>
-              <p>
-                Designing and managing efficient databases with MongoDB, MySQL,
-                PostgreSQL ensuring data integrity, security, and optimal
-                performance.
-              </p>
-              <div class="service-technologies">
-                <span>MongoDB</span>
+                <span>REST APIs</span>
                 <span>PostgreSQL</span>
-                <span>MySQL</span>
-                <span>Database Admin</span>
-              </div>
-            </div>
-
-            <div
-              class="service-card animate-on-scroll"
-              style="animation-delay: 0.6s"
-            >
-              <div class="service-icon">
-                <i class="ri-robot-line"></i>
-              </div>
-              <h3>AI Integration</h3>
-              <p>
-                Integrating AI models and machine learning solutions into web
-                applications for enhanced user experiences and intelligent
-                automation.
-              </p>
-              <div class="service-technologies">
-                <span>Python</span>
-                <span>AI APIs</span>
-                <span>Computer Vision</span>
-                <span>Deep Learning</span>
               </div>
             </div>
           </div>
@@ -455,64 +507,20 @@
       <section class="projects" id="projects">
         <div class="container">
           <div class="section-header animate-on-scroll">
-            <span class="section-number">03</span>
+            <span class="section-number">04</span>
             <h2 class="section-title">Featured Projects</h2>
             <p class="section-subtitle">Some of my recent work</p>
           </div>
 
           <div class="projects-container">
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.1s"
-            >
-              <div class="project-image">
-                <img
-                  src="res/mohj.png"
-                  alt="Mohj Educational Services Website"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/HossamZakariaSannad"
-                      target="_blank"
-                      class="project-link"
-                    >
-                      <i class="ri-github-line"></i>
-                    </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-category">React.js Website</div>
-                <h3>Mohj Project – Educational Services</h3>
-                <p>
-                  Built a modern multi-page React website for students in Egypt.
-                  Designed fully from a Figma prototype with smooth page
-                  transitions (Framer Motion), responsive RTL support, and
-                  client-side routing using React Router.
-                </p>
-                <div class="project-tech">
-                  <span>React.js</span>
-                  <span>Framer Motion</span>
-                  <span>React Router</span>
-                  <span>RTL Support</span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.2s"
-            >
+            <div class="project-card animate-on-scroll" style="animation-delay: 0.1s">
               <div class="project-image">
                 <img
                   src="res/task.png"
                   alt="Task Flow - AI Project Management"
                   loading="lazy"
+                  width="400"
+                  height="250"
                 />
                 <div class="project-overlay">
                   <div class="project-links">
@@ -520,23 +528,24 @@
                       href="https://github.com/HossamZakariaSannad/TasksManagmentSystem"
                       target="_blank"
                       class="project-link"
+                      aria-label="View Task Flow on GitHub"
+                      rel="noopener noreferrer"
                     >
-                      <i class="ri-github-line"></i>
+                      <i class="ri-github-line" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
+                    <a href="#" class="project-link" aria-label="View live demo">
+                      <i class="ri-external-link-line" aria-hidden="true"></i>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="project-content">
-                <div class="project-category">AI-Powered App</div>
+                <div class="project-category">AI-Powered Application</div>
                 <h3>Task Flow: AI-Powered Task Management</h3>
                 <p>
-                  Developed an AI-enhanced web application to streamline project
-                  management, task tracking, and team collaboration. Integrated
-                  a multi-model AI Chatbot (via Together AI, 5 LLMs) and BERT
-                  model for intelligent assignment generation.
+                  Developed an AI-enhanced web application to streamline project management, 
+                  task tracking, and team collaboration. Integrated a multi-model AI Chatbot 
+                  (via Together AI, 5 LLMs) and BERT model for intelligent assignment generation.
                 </p>
                 <div class="project-tech">
                   <span>MERN Stack</span>
@@ -547,15 +556,57 @@
               </div>
             </div>
 
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.3s"
-            >
+            <div class="project-card animate-on-scroll" style="animation-delay: 0.2s">
+              <div class="project-image">
+                <img
+                  src="res/mohj.png"
+                  alt="Mohj Educational Services Website"
+                  loading="lazy"
+                  width="400"
+                  height="250"
+                />
+                <div class="project-overlay">
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/HossamZakariaSannad"
+                      target="_blank"
+                      class="project-link"
+                      aria-label="View Mohj Project on GitHub"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="ri-github-line" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="project-link" aria-label="View live demo">
+                      <i class="ri-external-link-line" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-category">React.js Website</div>
+                <h3>Mohj Project – Educational Services</h3>
+                <p>
+                  Built a modern multi-page React website for students in Egypt. 
+                  Designed fully from a Figma prototype with smooth page transitions 
+                  (Framer Motion), responsive RTL support, and client-side routing using React Router.
+                </p>
+                <div class="project-tech">
+                  <span>React.js</span>
+                  <span>Framer Motion</span>
+                  <span>React Router</span>
+                  <span>RTL Support</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card animate-on-scroll" style="animation-delay: 0.3s">
               <div class="project-image">
                 <img
                   src="res/goodreads.png"
                   alt="GoodReads Clone - MERN Application"
                   loading="lazy"
+                  width="400"
+                  height="250"
                 />
                 <div class="project-overlay">
                   <div class="project-links">
@@ -563,22 +614,24 @@
                       href="https://github.com/HossamZakariaSannad/Goodreads-App"
                       target="_blank"
                       class="project-link"
+                      aria-label="View GoodReads Clone on GitHub"
+                      rel="noopener noreferrer"
                     >
-                      <i class="ri-github-line"></i>
+                      <i class="ri-github-line" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
+                    <a href="#" class="project-link" aria-label="View live demo">
+                      <i class="ri-external-link-line" aria-hidden="true"></i>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="project-content">
-                <div class="project-category">Full Stack App</div>
+                <div class="project-category">Full Stack Application</div>
                 <h3>GoodReads Clone – MERN Stack</h3>
                 <p>
-                  Built a full-stack book management web application using the
-                  MERN stack. Features secure authentication, efficient book
-                  catalog management, advanced search, and responsive UI.
+                  Built a full-stack book management web application using the MERN stack. 
+                  Features secure authentication, efficient book catalog management, 
+                  advanced search, and responsive UI.
                 </p>
                 <div class="project-tech">
                   <span>MongoDB</span>
@@ -589,15 +642,14 @@
               </div>
             </div>
 
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.4s"
-            >
+            <div class="project-card animate-on-scroll" style="animation-delay: 0.4s">
               <div class="project-image">
                 <img
                   src="res/e-commerce.png"
                   alt="E-Commerce Platform"
                   loading="lazy"
+                  width="400"
+                  height="250"
                 />
                 <div class="project-overlay">
                   <div class="project-links">
@@ -605,11 +657,13 @@
                       href="https://github.com/HossamZakariaSannad/E-Commerce-Vanilla-ITI"
                       target="_blank"
                       class="project-link"
+                      aria-label="View E-Commerce Project on GitHub"
+                      rel="noopener noreferrer"
                     >
-                      <i class="ri-github-line"></i>
+                      <i class="ri-github-line" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
+                    <a href="#" class="project-link" aria-label="View live demo">
+                      <i class="ri-external-link-line" aria-hidden="true"></i>
                     </a>
                   </div>
                 </div>
@@ -618,9 +672,9 @@
                 <div class="project-category">Frontend Project</div>
                 <h3>Vanilla JS E-Commerce Platform</h3>
                 <p>
-                  Developed an e-commerce platform using HTML, CSS, and ES6
-                  JavaScript with Bootstrap. Features product browsing, cart
-                  functionality, and streamlined checkout experience.
+                  Developed an e-commerce platform using HTML, CSS, and ES6 JavaScript 
+                  with Bootstrap. Features product browsing, cart functionality, and 
+                  streamlined checkout experience.
                 </p>
                 <div class="project-tech">
                   <span>HTML5</span>
@@ -631,15 +685,14 @@
               </div>
             </div>
 
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.5s"
-            >
+            <div class="project-card animate-on-scroll" style="animation-delay: 0.5s">
               <div class="project-image">
                 <img
                   src="res/dbms.png"
                   alt="Database Engine - Bash Script"
                   loading="lazy"
+                  width="400"
+                  height="250"
                 />
                 <div class="project-overlay">
                   <div class="project-links">
@@ -647,11 +700,13 @@
                       href="https://github.com/HossamZakariaSannad/DataBase-MS-BashScript"
                       target="_blank"
                       class="project-link"
+                      aria-label="View Database Engine on GitHub"
+                      rel="noopener noreferrer"
                     >
-                      <i class="ri-github-line"></i>
+                      <i class="ri-github-line" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
+                    <a href="#" class="project-link" aria-label="View live demo">
+                      <i class="ri-external-link-line" aria-hidden="true"></i>
                     </a>
                   </div>
                 </div>
@@ -660,9 +715,8 @@
                 <div class="project-category">System Programming</div>
                 <h3>Database Engine using Bash</h3>
                 <p>
-                  Developed a Bash-based Database Engine with a GUI for data
-                  storage and retrieval. Implements core database
-                  functionalities using shell scripting for UNIX-based systems.
+                  Developed a Bash-based Database Engine with GUI for data storage and retrieval. 
+                  Implements core database functionalities using shell scripting for UNIX-based systems.
                 </p>
                 <div class="project-tech">
                   <span>Bash</span>
@@ -673,15 +727,14 @@
               </div>
             </div>
 
-            <div
-              class="project-card animate-on-scroll"
-              style="animation-delay: 0.6s"
-            >
+            <div class="project-card animate-on-scroll" style="animation-delay: 0.6s">
               <div class="project-image">
                 <img
                   src="res/openpose.jpg"
                   alt="MUSCLE RECYCLER - AI Physiotherapy"
                   loading="lazy"
+                  width="400"
+                  height="250"
                 />
                 <div class="project-overlay">
                   <div class="project-links">
@@ -689,11 +742,13 @@
                       href="https://github.com/HossamZakariaSannad/MUSCLE-RECYCLER"
                       target="_blank"
                       class="project-link"
+                      aria-label="View MUSCLE RECYCLER on GitHub"
+                      rel="noopener noreferrer"
                     >
-                      <i class="ri-github-line"></i>
+                      <i class="ri-github-line" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="project-link">
-                      <i class="ri-external-link-line"></i>
+                    <a href="#" class="project-link" aria-label="View live demo">
+                      <i class="ri-external-link-line" aria-hidden="true"></i>
                     </a>
                   </div>
                 </div>
@@ -702,10 +757,9 @@
                 <div class="project-category">AI/ML Project</div>
                 <h3>MUSCLE RECYCLER – Physiotherapy Detector</h3>
                 <p>
-                  Developed an AI-powered physiotherapy exercise detector using
-                  Python, Deep Learning, Computer Vision, Blender, and OpenPose.
-                  Provides real-time feedback based on detected human poses.
-                  Grade: Excellent
+                  Developed an AI-powered physiotherapy exercise detector using Python, 
+                  Deep Learning, Computer Vision, Blender, and OpenPose. Provides real-time 
+                  feedback based on detected human poses. Grade: Excellent
                 </p>
                 <div class="project-tech">
                   <span>Python</span>
@@ -719,11 +773,39 @@
         </div>
       </section>
 
+      <!-- Certifications Section (NEW) -->
+      <section class="certifications" id="certifications">
+        <div class="container">
+          <div class="section-header animate-on-scroll">
+            <span class="section-number">05</span>
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Professional qualifications</p>
+          </div>
+
+          <div class="certifications-grid">
+            <div class="certification-card animate-on-scroll">
+              <div class="certification-icon">
+                <i class="ri-award-line"></i>
+              </div>
+              <h3>Oracle Database SQL - PL/SQL Workshop</h3>
+              <p>Comprehensive training in Oracle SQL and PL/SQL development</p>
+            </div>
+            <div class="certification-card animate-on-scroll" style="animation-delay: 0.2s">
+              <div class="certification-icon">
+                <i class="ri-code-line"></i>
+              </div>
+              <h3>JavaScript Certification</h3>
+              <p>Professional certification in JavaScript development</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact Section -->
       <section class="contact" id="contact">
         <div class="container">
           <div class="section-header animate-on-scroll">
-            <span class="section-number">04</span>
+            <span class="section-number">06</span>
             <h2 class="section-title">Get In Touch</h2>
             <p class="section-subtitle">Let's work together</p>
           </div>
@@ -732,7 +814,7 @@
             <div class="contact-info animate-on-scroll">
               <div class="contact-item">
                 <div class="contact-icon">
-                  <i class="ri-mail-line"></i>
+                  <i class="ri-mail-line" aria-hidden="true"></i>
                 </div>
                 <div class="contact-details">
                   <h3>Email</h3>
@@ -744,11 +826,11 @@
 
               <div class="contact-item">
                 <div class="contact-icon">
-                  <i class="ri-phone-line"></i>
+                  <i class="ri-phone-line" aria-hidden="true"></i>
                 </div>
                 <div class="contact-details">
                   <h3>Phone</h3>
-                  <a href="https://wa.me/201141524467" target="_blank"
+                  <a href="https://wa.me/201141524467" target="_blank" rel="noopener noreferrer"
                     >+20 114 152 4467</a
                   >
                 </div>
@@ -756,23 +838,24 @@
 
               <div class="contact-item">
                 <div class="contact-icon">
-                  <i class="ri-map-pin-line"></i>
+                  <i class="ri-map-pin-line" aria-hidden="true"></i>
                 </div>
                 <div class="contact-details">
                   <h3>Location</h3>
-                  <span>Cairo , Egypt</span>
+                  <span>Cairo, Egypt</span>
                 </div>
               </div>
 
               <div class="contact-item">
                 <div class="contact-icon">
-                  <i class="ri-linkedin-line"></i>
+                  <i class="ri-linkedin-line" aria-hidden="true"></i>
                 </div>
                 <div class="contact-details">
                   <h3>LinkedIn</h3>
                   <a
                     href="https://www.linkedin.com/in/hossam-zakaria-s/"
                     target="_blank"
+                    rel="noopener noreferrer"
                     >linkedin.com/in/hossam-zakaria-s</a
                   >
                 </div>
@@ -795,13 +878,13 @@
               <input type="hidden" name="_template" value="table" />
 
               <div class="form-group">
-                <input type="text" name="name" id="name" required />
-                <label for="name">Your Name </label>
+                <input type="text" name="name" id="name" required autocomplete="name" />
+                <label for="name">Your Name *</label>
               </div>
 
               <div class="form-group">
-                <input type="email" name="email" id="email" required />
-                <label for="email">Your Email </label>
+                <input type="email" name="email" id="email" required autocomplete="email" />
+                <label for="email">Your Email *</label>
               </div>
 
               <div class="form-group">
@@ -816,11 +899,11 @@
                   rows="6"
                   required
                 ></textarea>
-                <label for="message">Your Message </label>
+                <label for="message">Your Message *</label>
               </div>
 
               <button type="submit" class="btn btn-primary">
-                <i class="ri-send-plane-line"></i>
+                <i class="ri-send-plane-line" aria-hidden="true"></i>
                 <span>Send Message</span>
               </button>
             </form>
@@ -830,7 +913,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer-content">
           <div class="footer-text">
@@ -846,7 +929,7 @@
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-      <i class="ri-arrow-up-line"></i>
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
     </button>
 
     <!-- Scripts -->
